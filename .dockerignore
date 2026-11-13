@@ -1,0 +1,16 @@
+.git
+node_modules
+dist
+coverage
+*.log
+*.zip
+*.pyc
+__pycache__
+.vscode
+.idea
+.DS_Store
+.env
+.env.*
+!.env.example
+BUILD_EVIDENCE.json
+RELEASE_PROVENANCE.json
