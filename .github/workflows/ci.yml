@@ -1,0 +1,53 @@
+name: glip-frontend-ci
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  frontend:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20.20.2"
+          cache: "npm"
+
+      - name: Verify release contract
+        run: npm run verify:release
+
+      - name: Install dependencies deterministically
+        run: npm ci --no-audit --no-fund
+
+      - name: Test
+        run: npm test
+
+      - name: Check server syntax
+        run: node --check server.mjs
+
+      - name: Build
+        run: npm run build
+
+      - name: Build evidence
+        run: npm run build:evidence
+
+      - name: Release provenance
+        env:
+          GLIP_PROVENANCE_COMMIT_SHA: ${{ github.sha }}
+          GLIP_PROVENANCE_RUN_ID: ${{ github.run_id }}
+          GLIP_PROVENANCE_RUN_ATTEMPT: ${{ github.run_attempt }}
+          GLIP_PROVENANCE_REF: ${{ github.ref }}
+        run: npm run release:provenance
+
+      - name: Preserve lock, build evidence and provenance
+        uses: actions/upload-artifact@v4
+        with:
+          name: glip-frontend-build-evidence
+          path: |
+            package-lock.json
+            BUILD_EVIDENCE.json
+            RELEASE_PROVENANCE.json
+          if-no-files-found: error
