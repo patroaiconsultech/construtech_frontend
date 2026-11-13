@@ -1,0 +1,22 @@
+.aec-admin{max-width:1160px;margin:auto;padding:32px 20px;display:grid;gap:24px}
+.aec-admin-header,.aec-admin-entry{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.aec-admin-header h1,.aec-accept h1{margin:6px 0 8px;font-size:clamp(1.8rem,3vw,2.7rem)}
+.aec-admin-eyebrow{font-size:.7rem;letter-spacing:.17em;opacity:.7;font-weight:700}
+.aec-admin-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.aec-admin-card{padding:26px;border:1px solid rgba(150,155,170,.25);border-radius:16px;background:rgba(120,130,150,.06)}
+.aec-admin-card h2{font-size:1.3rem;margin-top:0}
+.aec-admin-card form,.aec-admin-stack,.aec-admin-link{display:grid;gap:12px}
+.aec-admin-card label{font-weight:600;font-size:.9rem;margin-top:8px}
+.aec-admin-card input{width:100%;box-sizing:border-box;padding:12px;border-radius:9px;
+ border:1px solid rgba(150,155,170,.45);background:var(--surface,#fff);color:var(--text,#172033)}
+.aec-admin-entry{border-bottom:1px solid rgba(140,150,160,.25);padding:12px 0}
+.aec-admin-entry small{display:block;opacity:.7;overflow-wrap:anywhere}
+.aec-admin-entry span{font-size:.8rem;white-space:nowrap}
+.aec-admin-link{margin-top:20px;border-top:1px solid rgba(150,155,170,.3);padding-top:16px}
+.aec-admin-error{color:#c22d44;font-weight:600}
+.aec-admin-note{color:#16805f;font-weight:600}
+.aec-admin-disclaimer{opacity:.7;font-size:.85rem}
+.aec-admin-state,.admin-state{max-width:650px;margin:10vh auto;padding:32px}
+.aec-accept{min-height:80vh;display:grid;place-items:center;padding:28px}
+.aec-accept .aec-admin-card{max-width:480px;width:100%}
+@media(max-width:600px){.aec-admin{padding:22px 12px}.aec-admin-entry{align-items:flex-start;flex-wrap:wrap}}
