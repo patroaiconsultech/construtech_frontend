@@ -1,0 +1,153 @@
+{
+  "issue": "GLIP-P0-002",
+  "name": "Frontend deterministic release contract V3",
+  "baseline": {
+    "artifact": "Arquitech-Glip-Premium-frontend-main (2)(1).zip",
+    "sha256": "c285c44be47443fc9eb0deea78b722b73b98c48a169a912570cd97c95c6c76ca",
+    "git_commit": "NOT_PROVEN_FROM_ZIP",
+    "git_tree": "NOT_PROVEN_FROM_ZIP"
+  },
+  "scope": {
+    "backend_changes": false,
+    "database_changes": false,
+    "migration_changes": false,
+    "runtime_proxy_changes": false,
+    "application_feature_changes": false
+  },
+  "files": [
+    {
+      "path": ".env.example",
+      "operation": "ADD",
+      "sha256": "70bbf334f24206c812e0130454f5a66fade35c5ea60186a24869b3f36ea348ee",
+      "bytes": 433
+    },
+    {
+      "path": "package-lock.json",
+      "operation": "ADD",
+      "sha256": "f16603eac1121abd24b1c1911c8e4f95f173eed83372351c6fbb410efe210245",
+      "bytes": 57786
+    },
+    {
+      "path": "package.json",
+      "operation": "REPLACE",
+      "sha256": "07a00e531a1d00889e1b45fb89210800623d03c6e4798a59f19199a3a6a9b6b1",
+      "bytes": 898
+    },
+    {
+      "path": "Dockerfile",
+      "operation": "REPLACE",
+      "sha256": "30baca4bd380ebd46527199d6c7b19f6c60a5d87c3e55e34ed414ce0594c440a",
+      "bytes": 672
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "operation": "REPLACE",
+      "sha256": "747cad6867f04c4c9117d0df706b96021943dec9da18db596f75b7dc6ba657d9",
+      "bytes": 1292
+    },
+    {
+      "path": "scripts/verify-release-contract.mjs",
+      "operation": "ADD",
+      "sha256": "c14be210098f5f3f6ef065fabccbd36954d7ac4ccc895d107d91ba76dc738823",
+      "bytes": 1965
+    },
+    {
+      "path": "scripts/release-provenance.mjs",
+      "operation": "ADD",
+      "sha256": "e5be22e5f0e09d98e525abd1fdd085908e2f0e2f78a85c8faf3d8610bb1f889e",
+      "bytes": 1301
+    },
+    {
+      "path": "SOURCE_MANIFEST.json",
+      "operation": "REPLACE",
+      "sha256": "c16eb3041b4789f3020930edc1805bce2b858158d86b6c94fac79367aa77b29e",
+      "bytes": 2671
+    },
+    {
+      "path": "LOCKFILE_GATE.md",
+      "operation": "REPLACE",
+      "sha256": "7060502c8f77f8402bac397ee2a3f8b35422c2c5e5748aff54184df771cd96df",
+      "bytes": 1449
+    },
+    {
+      "path": "RAILWAY_DEPLOYMENT.md",
+      "operation": "REPLACE",
+      "sha256": "8fd2d400a4c0a0771f462b4d73c6da25c6da2285f1e809e1090e1db6429da237",
+      "bytes": 1789
+    },
+    {
+      "path": "release-manifest.template.json",
+      "operation": "REPLACE",
+      "sha256": "e938d33271f9c498be039b630487ca1fd65f72a374fa226be050c49522ffa0d5",
+      "bytes": 1243
+    },
+    {
+      "path": "ROLLBACK_MANIFEST.json",
+      "operation": "REPLACE",
+      "sha256": "74968fee2ee8e587870a51e5c475d901f954d439b773c9fb683cb39becfaf5ec",
+      "bytes": 2388
+    },
+    {
+      "path": "GLIP_P0_002_IMPLEMENTATION.md",
+      "operation": "ADD",
+      "sha256": "dbf84eaaa745d45b4d1dd67a49e3ea4ad5f09a0ea70399a01ed337d759662bbf",
+      "bytes": 2542
+    },
+    {
+      "path": "tests/proxy-runtime-rc3.test.mjs",
+      "operation": "REPLACE",
+      "sha256": "0b7d38266d4fa936a25a099f02ce60ed8a3a17651441be038f145a0112ffa2f6",
+      "bytes": 3801
+    }
+  ],
+  "local_validation": {
+    "release_contract": "PASS",
+    "node_tests": "50_PASS",
+    "server_syntax": "PASS",
+    "npm_ci": "NOT_QUALIFIED_OFFLINE_ENVIRONMENT_NODE_22_NOT_CANONICAL",
+    "vite_build": "PENDING_NETWORKED_CI_NODE_20_20_2",
+    "delivery_diff_dry_run": "PASS_LOCAL_PACKAGE_GENERATION",
+    "baseline_plus_patch_equals_full": "PASS_LOCAL_PACKAGE_GENERATION",
+    "rollback_full_equals_baseline": "PASS_LOCAL_PACKAGE_GENERATION"
+  },
+  "governance": {
+    "write_executed": false,
+    "commit_executed": false,
+    "merge_executed": false,
+    "deploy_executed": false,
+    "migration_executed": false,
+    "execution_allowed": false,
+    "human_approval_required": true
+  },
+  "delivery_contract": {
+    "patch_zip_contains_repo_payload_only": true,
+    "diff_preview_is_external_audit_artifact": true,
+    "full_candidate_must_equal_baseline_plus_patch": true,
+    "transient_build_or_test_artifacts_allowed": false
+  },
+  "control_files": [
+    {
+      "path": "PATCH_MANIFEST.json",
+      "operation": "REPLACE",
+      "self_hash": "OMITTED_SELF_REFERENTIAL",
+      "note": "Integrity is covered by patch ZIP SHA256 and external AO-01 delivery SHA256SUMS."
+    }
+  ],
+  "repo_payload_paths": [
+    ".env.example",
+    "package-lock.json",
+    "package.json",
+    "Dockerfile",
+    ".github/workflows/ci.yml",
+    "scripts/verify-release-contract.mjs",
+    "scripts/release-provenance.mjs",
+    "SOURCE_MANIFEST.json",
+    "LOCKFILE_GATE.md",
+    "RAILWAY_DEPLOYMENT.md",
+    "release-manifest.template.json",
+    "ROLLBACK_MANIFEST.json",
+    "GLIP_P0_002_IMPLEMENTATION.md",
+    "tests/proxy-runtime-rc3.test.mjs",
+    "PATCH_MANIFEST.json"
+  ]
+}

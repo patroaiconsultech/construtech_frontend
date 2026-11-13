@@ -1,0 +1,37 @@
+{
+  "product": "CONSTRUTECH commercial frontend (provisional) on GLIP",
+  "version": "1.0.0rc7",
+  "repository": "TO_BE_CREATED_CONSTRUTECH_FRONTEND_INDEPENDENT_REPO",
+  "commit": "TO_BE_CAPTURED_FROM_CI",
+  "tree": "TO_BE_CAPTURED_FROM_CI",
+  "environment": "staging",
+  "railway_deployment_id": "TO_BE_CAPTURED_AFTER_DEPLOY",
+  "railway_runtime_commit": "TO_BE_CAPTURED_FROM_HEALTH",
+  "backend_target": {
+    "repository": "TO_BE_CREATED_CONSTRUTECH_BACKEND_INDEPENDENT_REPO",
+    "commit": "TO_BE_PINNED",
+    "network": "GLIP_BACKEND_URL_SERVER_SIDE_ONLY"
+  },
+  "package_lock_sha256": "216986763aa493ecdb95e43984564e61ebedae14b6717fd2eed4c5b211e8f2f3",
+  "env_example_sha256": "94ba59c38e0550b9e70d1bef6833c92435f76d214ebede5345e3e7bbfb0a21c6",
+  "build_evidence_sha256": "TO_BE_CAPTURED_FROM_CI",
+  "release_provenance_sha256": "TO_BE_CAPTURED_FROM_CI",
+  "production_approved": false,
+  "deploy_executed": false,
+  "human_approval_required": true,
+  "candidate_label": "CONSTRUTECH_PUBLIC_AGENT_G2_CANDIDATE_20261113",
+  "same_origin_backend_proxy": true,
+  "browser_m2m_secret": false,
+  "auth": {
+    "mode": "native_session",
+    "browser_token_storage": false,
+    "self_registration": false,
+    "tenant_required": true,
+    "oidc": false
+  },
+  "public_agent_g2": {
+    "provider_real_runtime": "NOT_PROVEN",
+    "production_approved": false,
+    "standalone_keys_required": true
+  }
+}

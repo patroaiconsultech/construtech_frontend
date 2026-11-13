@@ -1,0 +1,71 @@
+{
+  "issue": "GLIP-P0-002",
+  "purpose": "Restore the uploaded frontend baseline if deterministic release patch causes regression.",
+  "baseline_artifact": "Arquitech-Glip-Premium-frontend-main (2)(1).zip",
+  "baseline_sha256": "c285c44be47443fc9eb0deea78b722b73b98c48a169a912570cd97c95c6c76ca",
+  "actions": [
+    {
+      "path": ".env.example",
+      "action": "DELETE_IF_ADDED_BY_THIS_PATCH"
+    },
+    {
+      "path": "package-lock.json",
+      "action": "DELETE_IF_ADDED_BY_THIS_PATCH"
+    },
+    {
+      "path": "scripts/verify-release-contract.mjs",
+      "action": "DELETE_IF_ADDED_BY_THIS_PATCH"
+    },
+    {
+      "path": "scripts/release-provenance.mjs",
+      "action": "DELETE_IF_ADDED_BY_THIS_PATCH"
+    },
+    {
+      "path": "GLIP_P0_002_IMPLEMENTATION.md",
+      "action": "DELETE_IF_ADDED_BY_THIS_PATCH"
+    }
+  ],
+  "restore_files": [
+    {
+      "path": "package.json",
+      "sha256": "b3e385a5b5d6eb7ffa82f8d1c99f06b7a617b19c9e97f6ebd61dc2013f2c2b9c"
+    },
+    {
+      "path": "Dockerfile",
+      "sha256": "cc8ef364f7137583593713c1f5b7fe68540627b6a86707b1c59f8bf4e65e5256"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "4ab5a5629160456ec07533011ed8cda2728e1e9f49c452be2cc96af14c8a6adb"
+    },
+    {
+      "path": "SOURCE_MANIFEST.json",
+      "sha256": "8e01aff2d1c337eb947b8ee757a063d85a043e92d2561543d4f6e074998eadd1"
+    },
+    {
+      "path": "LOCKFILE_GATE.md",
+      "sha256": "4f887c1962035f0748b5bc26650045f28443a7390ff995931cbb93e7cd29abc8"
+    },
+    {
+      "path": "RAILWAY_DEPLOYMENT.md",
+      "sha256": "638c9623880f8b55ce9dd35325f9ebf18e3a9c93142c9931a2c7dc81943242f2"
+    },
+    {
+      "path": "release-manifest.template.json",
+      "sha256": "ab7bf35d8c7c6d87f0d13437fe863c289c7dca1b4c43355f8beeb22fe2fecdc2"
+    },
+    {
+      "path": "PATCH_MANIFEST.json",
+      "sha256": "0f11dc33cc57110519b382b5c3f8d8db24cd0a9c1a22f7693946f3fb7a44d01e"
+    },
+    {
+      "path": "ROLLBACK_MANIFEST.json",
+      "sha256": "43b9c7aa71d51c7528305926d7ef57409fdee23a47d2fb04842ec11e6367cf94"
+    },
+    {
+      "path": "tests/proxy-runtime-rc3.test.mjs",
+      "sha256": "dd4536d3a25e210f5d165fd4226481cce136d1c1768432f959b7bdd027992e03"
+    }
+  ],
+  "note": "env.example is intentionally not removed or modified by P0-002; it remains a transitional identical mirror. The proxy runtime test is restored byte-for-byte on rollback."
+}

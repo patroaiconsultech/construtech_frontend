@@ -1,0 +1,33 @@
+{
+  "name": "glip-platform-frontend",
+  "version": "1.0.0rc7",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 5174",
+    "verify:release": "node scripts/verify-release-contract.mjs",
+    "build": "vite build",
+    "test": "node scripts/run-tests.mjs",
+    "check": "npm run test && node --check server.mjs",
+    "start": "node server.mjs",
+    "build:evidence": "node scripts/build-evidence.mjs",
+    "release:provenance": "node scripts/release-provenance.mjs"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "4.3.4",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-router-dom": "6.30.6",
+    "typescript": "5.7.3",
+    "vite": "6.4.6"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.18",
+    "@types/react-dom": "18.3.5"
+  },
+  "packageManager": "npm@10.8.2",
+  "engines": {
+    "node": "20.20.2",
+    "npm": "10.8.2"
+  }
+}

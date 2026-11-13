@@ -1,0 +1,136 @@
+{
+  "product": "CONSTRUTECH commercial frontend (provisional) / GLIP operational platform",
+  "candidate_label": "CONSTRUTECH_PUBLIC_AGENT_G2_CANDIDATE_20261113",
+  "version": "1.0.0rc7",
+  "baseline": {
+    "artifact": "CONSTRUTECH_FRONTEND_COMPLETO_CANDIDATO_20261112.zip",
+    "sha256": "e4904f2ffa1933dba326dd1d4f021dcf73898c8aacf4ba76f152e1c3ba2a4e2c",
+    "commit": "NOT_PROVEN_FROM_ZIP",
+    "tree": "NOT_PROVEN_FROM_ZIP"
+  },
+  "auth": {
+    "mode": "native_session",
+    "oidc": false,
+    "native_login_route": "/login",
+    "browser_token_storage": false,
+    "self_registration": false,
+    "tenant_required": true
+  },
+  "release_contract": {
+    "canonical_env_file": ".env.example",
+    "legacy_env_mirror": "env.example",
+    "legacy_env_mirror_status": "TRANSITIONAL_IDENTICAL_COPY_PENDING_REMOVAL_AFTER_RAILWAY_PROOF",
+    "env_sha256": "94ba59c38e0550b9e70d1bef6833c92435f76d214ebede5345e3e7bbfb0a21c6",
+    "package_lock_present": true,
+    "package_lock_sha256": "216986763aa493ecdb95e43984564e61ebedae14b6717fd2eed4c5b211e8f2f3",
+    "package_lock_origin": {
+      "artifact": "CONSTRUTECH_FRONTEND_COMPLETO_CANDIDATO_20261112.zip",
+      "github_commit_sha": "NOT_PROVEN_FROM_ZIP",
+      "git_tree_sha": "NOT_PROVEN_FROM_ZIP",
+      "github_run_id": "NOT_PROVEN_FROM_ZIP",
+      "compatibility_with_current_package_json": "PASS_LOCAL_VERIFY_RELEASE"
+    },
+    "docker_install": "NPM_CI_ONLY",
+    "ci_install": "NPM_CI_ONLY",
+    "release_verifier": "scripts/verify-release-contract.mjs",
+    "provenance_generator": "scripts/release-provenance.mjs"
+  },
+  "checks": {
+    "previous_ao01_minimal_hardening": "ACCEPTED_OFFLINE",
+    "frontend_tests": "87_OF_87_PASS_LOCAL_NODE_22_16_0",
+    "release_contract": "PASS_LOCAL_NODE_22_16_0",
+    "new_candidate_npm_ci_node20": "NOT_EXECUTED",
+    "new_candidate_vite_build_node20": "NOT_EXECUTED",
+    "previous_baseline_build_node20": "PASS_IN_USER_PROVIDED_WINDOWS_LOG_ONLY_2026_11_12",
+    "previous_baseline_chrome_render": "PASS_IN_USER_PROVIDED_SCREENSHOT_ONLY",
+    "commercial_browser_e2e_new_candidate": "NOT_EXECUTED_G2",
+    "commercial_assessment_integration": "BACKEND_TESTCLIENT_PASS_ONLY",
+    "commercial_conversion": "NOT_IMPLEMENTED",
+    "crm": "NOT_INTEGRATED",
+    "generative_ai": "CODE_AND_MOCK_WIRE_IMPLEMENTED_PROVIDER_LIVE_NOT_PROVEN",
+    "video_asset_unchanged": true,
+    "railway_runtime": "NOT_PROVEN",
+    "g1_http_proxy_content_length": "PASS_LOCAL_REAL_HTTP_MOCK_UPSTREAM",
+    "g1_build": "BLOCKED_NODE20_NOT_AVAILABLE_AND_NPM_OFFLINE_CACHE_MISS",
+    "g2_build": "NOT_PROVEN_NO_NODE20_AND_NO_OFFLINE_NPM_CACHE"
+  },
+  "production_approved": false,
+  "staging_build_qualification_allowed": true,
+  "governance": {
+    "repository_write_executed": false,
+    "commit_executed": false,
+    "merge_executed": false,
+    "deploy_executed": false,
+    "human_approval_required": true
+  },
+  "artifact_bim": {
+    "route": "/app/projects/:projectId/artifacts",
+    "billing_scope": "glip",
+    "document_formats": [
+      "docx",
+      "pdf",
+      "pptx",
+      "xlsx"
+    ],
+    "ifc_first_class": true,
+    "dwg_upload": true,
+    "3d_viewer": "PENDING_GATE_3",
+    "bim_semantic_jobs": "IMPLEMENTED_UI_CONTRACT",
+    "ifcopenshell_runtime": "BACKEND_WORKER_REQUIRED"
+  },
+  "source_hardening_baseline_sha256": "41580e2ecfd5441542ad5981acf2fb7bec14021bb8f8e466b5a3dc821cbabb2f",
+  "baseline_source_checks": {
+    "source_tests": "78_OF_78_PASS_LOCAL_NODE_22_16_0",
+    "server_syntax": "PASS_LOCAL_NODE_22_16_0",
+    "release_contract_verifier": "PASS_LOCAL_NODE_22_16_0",
+    "npm_ci": "NOT_EXECUTED_IN_NODE_20_20_2",
+    "vite_build": "FAILED_LOCAL_VITE_PERMISSION_DENIED_NODE_22_NOT_PROJECT_NODE_20",
+    "production_case_assets": "NOT_PROVEN_LOCAL_OPTIMIZED",
+    "runtime_provenance": "PENDING_RAILWAY_REDEPLOY_AND_HEALTH_CAPTURE",
+    "proxy_test_artifact_cleanup": "IMPLEMENTED_P0_002_V3",
+    "video_http": "PASS_LOCAL_HTTP_RANGE_HEAD_416_206",
+    "commercial_browser_e2e": "NOT_PROVEN",
+    "commercial_conversion": "LOCAL_PRE_DIAGNOSIS_ONLY_NO_CRM"
+  },
+  "commercial_agent_v1": {
+    "mode": "deterministic_guidance_v1",
+    "endpoint": "/api/v1/public/commercial/assessment",
+    "activation": "BACKEND_OFF_BY_DEFAULT_AND_REQUIRES_AO01_REVIEW",
+    "consent": "SEPARATE_OPT_IN",
+    "no_persistence": true,
+    "no_crm": true,
+    "no_llm": true,
+    "status": "LEGACY_DISABLED_NOT_USED_BY_G2_LANDING"
+  },
+  "independent_project_gate": {
+    "glip_production_mutation": "FORBIDDEN",
+    "new_github_frontend": "NOT_CREATED",
+    "new_github_backend": "NOT_CREATED",
+    "new_railway_project": "NOT_CREATED",
+    "new_postgres": "NOT_CREATED",
+    "legacy_glip_backend_fallback": "REMOVED_FROM_ENV_TEMPLATE",
+    "legacy_glip_github_provenance": "REMOVED_FROM_GENERATOR",
+    "public_commercial_assessment": "FLAG_OFF_DEFAULT",
+    "crm": "NOT_IMPLEMENTED",
+    "generative_ai": "G2_FLAG_OFF_PENDING_PROVIDER_REAL_KEY_AND_ABUSE_PROTECTION",
+    "source_gate_only": true,
+    "production_approved": false
+  },
+  "public_agent_g2": {
+    "mode": "openai_responses_api_stateless",
+    "endpoints": [
+      "GET /api/v1/public/agent/status",
+      "POST /api/v1/public/agent/chat"
+    ],
+    "configuration_prefix": "CONSTRUTECH_AGENT_",
+    "feature_default": "OFF",
+    "consent_required": true,
+    "provider_key_server_only": true,
+    "provider_live_runtime": "NOT_PROVEN",
+    "conversation_persistence": false,
+    "crm_integration": false,
+    "external_distributed_abuse_protection": "NOT_PROVEN",
+    "real_client_e2e": "NOT_PROVEN",
+    "source_tests": "PASS_LOCAL_87_OF_87_NODE22"
+  }
+}
