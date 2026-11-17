@@ -14,9 +14,11 @@ test("commercial candidate release lock hash is not stale",()=>{
   assert.equal(m.commercial_agent_v1.no_llm,true);
   assert.match(fs.readFileSync("RAILWAY_DEPLOYMENT.md","utf8"),new RegExp(expected));
 });
-test("CTA matches implemented local diagnostic, not lead submission",()=>{
+test("CTA explains demo request is a chat, not lead submission",()=>{
   const landing=fs.readFileSync("src/routes/Landing.tsx","utf8");
-  assert.doesNotMatch(landing,/Solicitar (uma )?demonstração/);
+  assert.match(landing,/onClick=\{showDemo\}>Solicitar demonstração/);
+  assert.match(landing,/sem agendamento ou registro de lead/);
+  assert.match(landing,/function showDemo\(\)\{showTopic\(/);
   assert.match(landing,/Conversar com a IA/);
   assert.match(landing,/não gera lead nem contato comercial/);
 });
